@@ -1,10 +1,59 @@
 import { Post } from "./components/Post";
 import { Header } from "./components/Header";
-import { Sidebar } from "./components/Sidebar"
+import { Sidebar } from "./components/Sidebar";
 
 import styles from "./App.module.css";
 
 import "./global.css";
+
+const posts = [
+  {
+    id: 1,
+    author: {
+      avatarUrl: "http://github.com/adrfelipe.png",
+      name: "André Felipe",
+      role: "Developer",
+    },
+    content: [
+      { type: "paragraph", content: "Fala galeraa 👋" },
+      {
+        type: "paragraph",
+        content:
+          "Acabei de subir mais um projeto no meu portifa. É um projeto que fiz",
+      },
+      {
+        type: "paragraph",
+        content:
+          "no NLW Return, evento da Rocketseat. O nome do projeto é DoctorCare 🚀",
+      },
+      { type: "link", content: "👉 jane.design/doctorcare" },
+    ],
+    publishedAt: new Date("2023-08-15 20:00:00"),
+  },
+  {
+    id: 2,
+    author: {
+      avatarUrl: "http://github.com/diego3g.png",
+      name: "Diego Fernandes",
+      role: "CTO Rocketseat",
+    },
+    content: [
+      { type: "paragraph", content: "Fala galeraa 👋" },
+      {
+        type: "paragraph",
+        content:
+          "Acabei de subir mais um projeto no meu portifa. É um projeto que fiz",
+      },
+      {
+        type: "paragraph",
+        content:
+          "no NLW Return, evento da Rocketseat. O nome do projeto é DoctorCare 🚀",
+      },
+      { type: "link", content: "👉 jane.design/doctorcare" },
+    ],
+    publishedAt: new Date("2023-08-10 10:00:00"),
+  },
+];
 
 export function App() {
   return (
@@ -14,11 +63,16 @@ export function App() {
       <div className={styles.wrapper}>
         <Sidebar />
         <main>
-          <Post
-            author="André"
-            content="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Autem aliquam consequuntur ullam saepe molestias odio, perferendis ratione quasi, ea sunt praesentium sint voluptatum modi? Ea culpa ad accusantium aliquid sed."
-          />
-          <Post author="João" content="Um texto bem top" />
+          {posts.map(post => {
+            return (
+            <Post
+              key={post.id}
+              author={post.author}
+              content={post.content}
+              publishedAt={post.publishedAt}
+            />
+            )
+          })}
         </main>
       </div>
     </div>
