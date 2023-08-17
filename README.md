@@ -1,8 +1,6 @@
-# React + Vite
+#React + TypeScript + Vite
+Projeto 01 do Ignite da Rocketseat em Typescript
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este projeto tem como função o aprendizado e treinamento de habilidades de programalão com ReactJS usando Javascript.
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- O mesmo projeto usando TypeScript pode ser encontrado [clicando aqui!](https://github.com/adrfelipe/ignite-reactjs-ts)
